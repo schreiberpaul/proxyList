@@ -43,9 +43,9 @@ def rotatingProxies(limit=10, proto="https", country="DE"):
         yield item
 
 def main():
-    # proxy = getProxyList()
-    # print(f"Found {len(proxy)} proxy servers: ")
-    for i in rotatingProxies():
+    proxy = getProxyList()
+    print(f"Found {len(proxy)} proxy servers: ")
+    for i in proxy:
         print(f"\t{i['http']}")
 
 if __name__ == "__main__":
